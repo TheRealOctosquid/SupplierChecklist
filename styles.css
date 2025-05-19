@@ -1,0 +1,298 @@
+/* Common styles for both themes */
+#coupa-checklist {
+  position: fixed;
+  top: 50px;
+  right: 20px;
+  width: 350px;
+  z-index: 10000;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  font-family: Arial, sans-serif;
+  transition: all 0.3s ease;
+}
+
+.checklist-header {
+  padding: 10px;
+  cursor: move;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checklist-header h2 {
+  margin: 0;
+  font-size: 16px;
+}
+
+.checklist-content {
+  padding: 10px;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.question {
+  margin-bottom: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.question p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+button:disabled {
+  cursor: default;
+}
+
+.minimize-button {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.theme-toggle {
+  font-size: 12px;
+}
+
+/* Early 2000s Retro Theme */
+.retro {
+  background-color: #d3d3d3;
+  border: 3px outset #c0c0c0;
+}
+
+.retro .checklist-header {
+  background: linear-gradient(to bottom, #7b9ebd 0%, #2a4e77 100%);
+  color: white;
+  border-bottom: 2px solid #000080;
+}
+
+.retro .minimize-button {
+  background-color: #c0c0c0;
+  border: 2px outset #dcdcdc;
+  color: #000080;
+}
+
+.retro .checklist-content {
+  background-color: #ececec;
+}
+
+.retro .question {
+  border: 2px inset #c0c0c0;
+  background-color: #f0f0f0;
+}
+
+.retro button {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #d3d3d3 100%);
+  border: 2px outset #dcdcdc;
+  font-weight: bold;
+  color: #000080;
+}
+
+.retro button.selected {
+  background: #9dc3e6;
+  border: 2px inset #7ea8cc;
+}
+
+.retro .answered-yes {
+  background-color: #ddffdd;
+}
+
+.retro .answered-no {
+  background-color: #ffdddd;
+}
+
+/* Modern Theme */
+.modern {
+  background-color: white;
+  border-radius: 8px;
+  border: 1px solid #e0e0e0;
+}
+
+.modern .checklist-header {
+  background-color: #4285f4;
+  color: white;
+  border-radius: 8px 8px 0 0;
+}
+
+.modern .minimize-button {
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 4px;
+  border: none;
+  color: white;
+}
+
+.modern .checklist-content {
+  background-color: white;
+}
+
+.modern .question {
+  border: 1px solid #e0e0e0;
+  background-color: #fafafa;
+}
+
+.modern button {
+  background-color: #f8f8f8;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  color: #444;
+  transition: all 0.2s;
+}
+
+.modern button:hover {
+  background-color: #f1f1f1;
+}
+
+.modern button.selected {
+  background-color: #4285f4;
+  border-color: #3367d6;
+  color: white;
+}
+
+.modern .answered-yes {
+  background-color: #e6f4ea;
+  border-left: 4px solid #34a853;
+}
+
+.modern .answered-no {
+  background-color: #fce8e6;
+  border-left: 4px solid #ea4335;
+}
+
+.completion {
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  margin-top: 15px;
+}
+
+.retro .completion {
+  background-color: #ffffcc;
+  border: 2px inset #e6e6b8;
+}
+
+.modern .completion {
+  background-color: #e8f0fe;
+  border-radius: 4px;
+  border: 1px solid #d2e3fc;
+}
+
+/* Add these to your styles.css file */
+
+/* Question navigation */
+.question-nav {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+
+.question-counter {
+  color: #666;
+}
+
+.back-btn {
+  background: none;
+  border: none;
+  padding: 4px 8px;
+  margin-right: 10px;
+  cursor: pointer;
+  font-size: 12px;
+  text-decoration: underline;
+  display: inline-block;
+}
+
+/* Reset button container */
+.reset-container {
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+/* Style for retro theme */
+.retro .back-btn {
+  font-weight: bold;
+  color: #000080;
+  background-color: #e0e0e0;
+  border: 2px outset #dcdcdc;
+}
+
+.retro .back-btn:hover {
+  background-color: #d0d0d0;
+}
+
+.retro #reset-all-btn {
+  background: linear-gradient(to bottom, #f0f0f0 0%, #d3d3d3 100%);
+  border: 2px outset #dcdcdc;
+  font-weight: bold;
+  color: #000080;
+  padding: 5px 15px;
+  cursor: pointer;
+}
+
+/* Style for modern theme */
+.modern .back-btn {
+  color: #4285f4;
+  border-radius: 4px;
+}
+
+.modern .back-btn:hover {
+  background-color: #f8f8f8;
+}
+
+.modern #reset-all-btn {
+  background-color: #f8f8f8;
+  border: 1px solid #dcdcdc;
+  border-radius: 4px;
+  color: #444;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.modern #reset-all-btn:hover {
+  background-color: #f1f1f1;
+}
+
+/* Add this to your stylesheet */
+
+a.highlight-red {
+  display: inline-block;
+  padding: 4px 8px;
+  background: #fff8f8;
+  border: 2px solid red !important;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 2px red;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.highlight-red {
+  border: 2px solid red !important;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 2px red;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+li.highlight-red {
+  border: 2px solid red !important;
+  border-radius: 6px;
+  box-shadow: 0 0 8px 2px red;
+  background: #fff8f8;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+
+.hidden {
+  display: none !important;
+}
